@@ -20,7 +20,17 @@
     <modules>
         <module>observer-pattern</module>
         <module>event-study</module>
+        <module>responsibility-chain</module>
+        <module>proxy-pattern</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <resources>
