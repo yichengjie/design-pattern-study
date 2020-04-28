@@ -12,9 +12,10 @@ public class FilterChain {
     public void doFilter(ServletRequest request, ServletResponse response) {
         int index = ContextHolder.get()  ;
         if (index < list.size()){
-            ContextHolder.set(index +1);
             Filter filter = list.get(index) ;
+            ContextHolder.set(index +1);
             filter.doFilter(request,response,this);
+            System.out.println("----------------------");
         }
     }
 
