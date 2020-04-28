@@ -3,8 +3,6 @@ package com.yicj.filter;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class Main {
 
@@ -25,36 +23,23 @@ public class Main {
         filters.add(new BBBFilter()) ;
         filters.add(new CCCFilter()) ;
         FilterChain chain = new FilterChain(filters) ;
-        ExecutorService pool = Executors.newFixedThreadPool(3);
-        for (int i = 0 ; i < 1 ; i++){
-            pool.submit(new MyTask(chain)) ;
-        }
-        pool.shutdown();
+        ContextHolder.set(0);
+        chain.doFilter(new ServletRequest(),new ServletResponse() );
+        ContextHolder.clean();
     }
 
 
-    public void doExecute(ServletRequest request, ServletResponse response,FilterChain chain){
-        try {
-            ContextHolder.set(0);
-            chain.doFilter(new ServletRequest(),new ServletResponse() );
-        }finally {
-            ContextHolder.clean();
-        }
-    }
-
-
-
-    class MyTask implements Runnable{
-
-        private FilterChain chain ;
-
-        public MyTask(FilterChain chain){
-            this.chain = chain ;
-        }
-        @Override
-        public void run() {
-            doExecute(new ServletRequest(),new ServletResponse(),chain);
-        }
-    }
+//    class MyTask implements Runnable{
+//
+//        private FilterChain chain ;
+//
+//        public MyTask(FilterChain chain){
+//            this.chain = chain ;
+//        }
+//        @Override
+//        public void run() {
+//            doExecute(new ServletRequest(),new ServletResponse(),chain);
+//        }
+//    }
 
 }

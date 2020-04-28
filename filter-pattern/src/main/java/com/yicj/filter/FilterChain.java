@@ -12,12 +12,10 @@ public class FilterChain {
     public void doFilter(ServletRequest request, ServletResponse response) {
         int index = ContextHolder.get()  ;
         if (index < list.size()){
-            System.out.println("开始执行.["+index+"]..");
-            ContextHolder.set(++index);
+            ContextHolder.set(index +1);
             Filter filter = list.get(index) ;
             filter.doFilter(request,response,this);
         }
-        System.out.println("结束执行."+ContextHolder.get()+"...");
     }
 
 }
