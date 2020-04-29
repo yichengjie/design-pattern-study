@@ -26,8 +26,8 @@ public class Main {
         filters.add(new CCCFilter()) ;
         FilterChain chain = new FilterChain(filters) ;
         //doExecute(new ServletRequest(),new ServletResponse(), chain);
-        ExecutorService pool = Executors.newFixedThreadPool(3);
-        for (int i = 0 ; i < 1 ;i ++){
+        ExecutorService pool = Executors.newFixedThreadPool(1);
+        for (int i = 0 ; i < 5 ;i ++){
             pool.submit(new MyTask(chain)) ;
         }
         pool.shutdown();

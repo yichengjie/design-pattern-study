@@ -22,7 +22,7 @@
         <module>event-study</module>
         <module>responsibility-chain</module>
         <module>proxy-pattern</module>
-        <module>filter-pattern</module>
+        <module>filter-chain-app</module>
     </modules>
 
     <dependencies>
