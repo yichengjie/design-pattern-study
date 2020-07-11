@@ -23,6 +23,7 @@
         <module>responsibility-chain</module>
         <module>proxy-pattern</module>
         <module>filter-chain-app</module>
+        <module>adapter-pattern</module>
     </modules>
 
     <dependencies>
