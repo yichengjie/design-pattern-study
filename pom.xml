@@ -24,6 +24,7 @@
         <module>proxy-pattern</module>
         <module>filter-chain-app</module>
         <module>adapter-pattern</module>
+        <module>design-principle</module>
     </modules>
 
     <dependencies>
