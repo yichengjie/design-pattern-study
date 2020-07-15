@@ -25,6 +25,7 @@
         <module>filter-chain-app</module>
         <module>adapter-pattern</module>
         <module>design-principle</module>
+        <module>factory-pattern</module>
     </modules>
 
     <dependencies>
@@ -32,6 +33,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.19</version>
         </dependency>
     </dependencies>
 
