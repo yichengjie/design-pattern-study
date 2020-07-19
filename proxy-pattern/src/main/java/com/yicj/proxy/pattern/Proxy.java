@@ -10,10 +10,10 @@ public class Proxy implements Subject {
 
 
     @Override
-    public void request() {
+    public void request(String name , Integer age) {
         System.out.println("before ...");
         try {
-            this.subject.request();
+            this.subject.request(name, age);
         } catch (Exception ex) {
             System.out.println("ex : " + ex.getMessage());
             throw  ex ;

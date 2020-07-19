@@ -26,6 +26,7 @@
         <module>adapter-pattern</module>
         <module>design-principle</module>
         <module>factory-pattern</module>
+        <module>code-270</module>
     </modules>
 
     <dependencies>
@@ -39,6 +40,24 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.19</version>
+        </dependency>
+
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.5.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>29.0-jre</version>
         </dependency>
     </dependencies>
 

@@ -10,3 +10,5 @@
   1. Collection 的iterator方法   
   2. URLStreamHandlerFactory  --> URLStreamHandler
   3. LogFactory logback
+  4. Connection
+  5. SqlSessionFactory
